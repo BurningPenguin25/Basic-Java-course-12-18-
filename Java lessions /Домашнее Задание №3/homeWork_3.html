@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //         1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100. 
+        // (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.)
+
+        //  простое число делится только на 1 или на само себя. а также оно больше единицы
+
+
+
+        // мой сетод решения  
+        //  почти два дня решал, но никак не смог найти верный путь: получил следующие ответы( 3,5,7,9,11,13,15 и тд. )
+
+        let pNumb = 1;
+        while (pNumb <= 100 && pNumb++) {
+            if (pNumb % 2 !== 0) {
+                break;
+            }
+
+        }
+
+
+
+
+
+        // метод найденный в интернете. Не понимаю, как делать и откуда и зачем вообще берутся строчки 38, 41.
+
+        let nums = 0;   //    делал как я          
+        while (nums <= 100) {
+            let check = true;   // зачем эта строчка? Не понимаю, как можно было догадаться до этого.
+            for (let i = 2; i < nums; i++) {
+                if (nums % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+
+
+            if (check) console.log(nums);
+            nums++;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. 
+        // Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. 
+        // Товары в корзине хранятся в массиве. Задачи:
+
+        // a) Организовать такой массив для хранения товаров в корзине;
+
+        // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+
+
+        // попытка -1
+
+
+
+        var sringBasket = 0;
+
+
+        const basket = [
+            { product: 'Телефон', price: 30, quantity: 10 },
+            { product: 'ручка', price: 20, quantity: 1 },
+            { product: 'карандаш', price: 10, quantity: 4 },
+            { product: 'тетрадь', price: 114, quantity: 5 },
+            { product: 'Бумага офисная', price: 15, quantity: 3 },
+            { product: 'файлы', price: 5, quantity: 6 },
+            { product: 'яблоки', price: 35, quantity: 4 },
+            { product: 'Манго', price: 25, quantity: 5 },
+        ]
+
+
+
+
+        function countBasketPrice() {
+            for (i = 0; i < basket.length; sringBasket++) {
+                sringBasket = sringBasket + basket[i].price
+            }
+            return sringBasket;
+        }                                                            //до этого момента как то дошел сам, с небольшими подсказками, а дальше уже не смог. 
+
+
+        for (i = 0; i < basket.length; sringBasket++) {
+            console.log(basket[i].price + basket[i].quantity)
+        }
+
+
+        console.log(countBasketPrice(basket))
+
+
+
+
+
+        // попытка -2
+
+
+
+
+        const cart = [
+            ['яблоко', 60, 30],
+            ['ручки', 40, 25],
+            ['провод', 80, 10],
+        ];
+
+        function countBasketPrice() {
+            for (i = 0; i < cart.length; i++) {
+                cartString = cart([1][2]);
+            }
+            return cartString;
+        }
+
+
+        console.log(countBasketPrice())
+
+
+
+
+
+        // Задание 4 Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла.
+
+
+        for (i = 0; i < 10; i++) console.log(i)   // полностью самостоятельно. Тут как то сразу понял что надо. 
+        {
+
+
+        }
+
+
+
+
+        //Задание 5. Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+
+
+
+    //    Также, беспокоющий меня вопрос в комментарии к новой ветке
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
